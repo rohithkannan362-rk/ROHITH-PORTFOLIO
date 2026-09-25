@@ -1,0 +1,201 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]: Entering the Void
+  - navigation [ref=e5]:
+    - generic [ref=e6]:
+      - link "About" [ref=e7] [cursor=pointer]:
+        - /url: "#about"
+      - link "Skills" [ref=e8] [cursor=pointer]:
+        - /url: "#skills"
+      - link "Projects" [ref=e9] [cursor=pointer]:
+        - /url: "#projects"
+      - link "Experience" [ref=e10] [cursor=pointer]:
+        - /url: "#experience"
+      - link "Contact" [ref=e11] [cursor=pointer]:
+        - /url: "#contact"
+  - generic [ref=e12]:
+    - generic [ref=e13]:
+      - img "S. Rohith Kannan" [ref=e17]
+      - heading "S. Rohith Kannan" [level=1] [ref=e18]: S. RohithKannan
+      - paragraph [ref=e19]
+      - generic [ref=e20]:
+        - link "View My Work" [ref=e21] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Get In Touch" [ref=e22] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - generic [ref=e25]: "0"
+          - generic [ref=e26]: Active Platforms
+        - generic [ref=e27]:
+          - generic [ref=e28]: ∞
+          - generic [ref=e29]: Ambition Level
+    - generic [ref=e30]: Scroll to Explore
+  - generic [ref=e32]:
+    - paragraph [ref=e34]: 01 — About
+    - heading "Who I Am" [level=2] [ref=e35]
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - paragraph [ref=e39]:
+            - text: I am
+            - strong [ref=e40]: S. Rohith Kannan
+            - text: — a Biotechnology undergraduate at Sethu Institute of Technology and a high-performance product engineer driven by the intersection of biological science and intelligence systems.
+          - paragraph [ref=e41]:
+            - text: While many study, I build.
+            - strong [ref=e42]: OLIVA
+            - text: is a disruptive gym management SaaS modernizing traditional fitness operations.
+            - strong [ref=e43]: NutriTamil AI
+            - text: is the first comprehensive nutrition platform dedicated to South Indian health. I've also built a
+            - strong [ref=e44]: Hospital-facing clinical platform
+            - text: for adolescent health management, taking it from concept to a full AI-integrated product.
+          - paragraph [ref=e45]: My toolkit centers on React, Firebase, and Gemini/Groq AI. I specialize in shipping fast, scaling effectively, and solving complex problems with lean, efficient code. Beyond software, I've conducted clinical diagnostic tests and nutritional composition analysis during my internships, bridging the gap between biology and technology.
+        - generic [ref=e46]:
+          - link "LinkedIn" [ref=e47] [cursor=pointer]:
+            - /url: https://linkedin.com/in/rohith-kannan-535712288
+          - link "GitHub" [ref=e48] [cursor=pointer]:
+            - /url: https://github.com/rohithkannan362-rk
+          - link "Email" [ref=e49] [cursor=pointer]:
+            - /url: mailto:rohithkannan362@gmail.com
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]: △
+          - generic [ref=e53]: Founder
+          - generic [ref=e54]: 3 full-stack platforms built
+        - generic [ref=e55]:
+          - generic [ref=e56]: ☉
+          - generic [ref=e57]: Scientist
+          - generic [ref=e58]: B.Tech Biotechnology, SIT Madurai
+        - generic [ref=e59]:
+          - generic [ref=e60]: ◆
+          - generic [ref=e61]: Engineer
+          - generic [ref=e62]: Self-taught, AI-assisted dev
+        - generic [ref=e63]:
+          - generic [ref=e64]: ○
+          - generic [ref=e65]: Builder
+          - generic [ref=e66]: Long-term, large-scale vision
+  - generic [ref=e68]:
+    - paragraph [ref=e70]: 02 — Skills
+    - heading "Technical Proficiency" [level=2] [ref=e71]
+    - generic [ref=e72]:
+      - generic [ref=e73]:
+        - generic [ref=e74]: React & Vite
+        - generic [ref=e75]: Frontend
+      - generic [ref=e76]:
+        - generic [ref=e77]: Firebase
+        - generic [ref=e78]: Backend / Database
+      - generic [ref=e79]:
+        - generic [ref=e80]: Gemini & Groq API
+        - generic [ref=e81]: AI Integration
+      - generic [ref=e82]:
+        - generic [ref=e83]: JavaScript / HTML / CSS
+        - generic [ref=e84]: Language
+      - generic [ref=e85]:
+        - generic [ref=e86]: Python / C / C++
+        - generic [ref=e87]: Language
+      - generic [ref=e88]:
+        - generic [ref=e89]: Biotechnology
+        - generic [ref=e90]: Domain Science
+      - generic [ref=e91]:
+        - generic [ref=e92]: Clinical Diagnostics
+        - generic [ref=e93]: Domain Science
+      - generic [ref=e94]:
+        - generic [ref=e95]: Node.js
+        - generic [ref=e96]: Runtime
+      - generic [ref=e97]:
+        - generic [ref=e98]: Git / GitHub
+        - generic [ref=e99]: Version Control
+      - generic [ref=e100]:
+        - generic [ref=e101]: SaaS Architecture
+        - generic [ref=e102]: Product Engineering
+      - generic [ref=e103]:
+        - generic [ref=e104]: Product Strategy
+        - generic [ref=e105]: Business & Product
+      - generic [ref=e106]:
+        - generic [ref=e107]: Go-to-Market
+        - generic [ref=e108]: Business & Product
+  - generic [ref=e110]:
+    - paragraph [ref=e112]: 03 — Projects
+    - heading "Selected Work" [level=2] [ref=e113]
+    - generic [ref=e114]:
+      - generic [ref=e120]:
+        - generic [ref=e121]: OLIVA
+        - generic [ref=e122]: Gym Management SaaS
+      - paragraph [ref=e123]: A comprehensive SaaS ecosystem engineered for fitness entrepreneurs. Featuring a multi-tenant architecture with specialized dashboards for Owners, Trainers, and Members. Automated subscription workflows and real-time performance analytics provide a professional edge to independent gym operators.
+      - generic [ref=e124]:
+        - generic [ref=e125]: React
+        - generic [ref=e126]: Firebase
+        - generic [ref=e127]: Node.js
+        - generic [ref=e128]: TailwindCSS
+      - link "Launch Project" [ref=e129] [cursor=pointer]:
+        - /url: https://gymapp-two-kohl.vercel.app
+    - generic [ref=e130]:
+      - generic [ref=e136]:
+        - generic [ref=e137]: NutriTamil AI
+        - generic [ref=e138]: AI Nutrition Intelligence Platform
+      - paragraph [ref=e139]: A Tamil-language health and nutrition app that helps people track meals, plan diets, manage medicines, read lab reports, check symptoms, and track diabetes reversal progress — all with AI, and in Tamil (with English too). Features a recipe engine built around Tamil Nadu food and traditional Siddha recipes, ensuring diet suggestions fit local eating habits rather than generic Western meal plans.
+      - generic [ref=e140]:
+        - generic [ref=e141]: React
+        - generic [ref=e142]: Vite
+        - generic [ref=e143]: Firebase
+        - generic [ref=e144]: Gemini AI
+      - link "Launch Project" [ref=e145] [cursor=pointer]:
+        - /url: https://nutri-ai-lemon.vercel.app
+    - generic [ref=e146]:
+      - generic [ref=e151]:
+        - generic [ref=e152]: Adolescent Health Care
+        - generic [ref=e153]: Clinical Management Platform
+      - paragraph [ref=e154]: Hospital-facing clinical platform for adolescent health management, built solo as the sole technical founder. Features a React frontend spanning 26 features across 7 clinical modules (screening, risk classification, well-being tracking, nutrition). Integrated with Firebase/Firestore and AI (Groq) for risk prediction and personalized nutrition guidance.
+      - generic [ref=e155]:
+        - generic [ref=e156]: React
+        - generic [ref=e157]: Firebase
+        - generic [ref=e158]: Firestore
+        - generic [ref=e159]: Groq AI
+      - link "Launch Project" [ref=e160] [cursor=pointer]:
+        - /url: https://adolescent-health-ai-lgwf.vercel.app
+    - generic [ref=e161]:
+      - generic [ref=e166]:
+        - generic [ref=e167]: Myco-Larvae Waste Converter
+        - generic [ref=e168]: Academic Research Project
+      - paragraph [ref=e169]: Designed a hybrid bioconversion system integrating Black Soldier Fly larvae, fungi, and IoT sensors to convert organic waste into sustainable by-products (animal feed and compost). Led literature review and system design. Selected for the MSME Idea Hackathon.
+      - generic [ref=e170]:
+        - generic [ref=e171]: Bioconversion
+        - generic [ref=e172]: IoT
+        - generic [ref=e173]: Sustainability
+  - generic [ref=e175]:
+    - paragraph [ref=e177]: 04 — Experience
+    - heading "Background" [level=2] [ref=e178]
+    - generic [ref=e179]:
+      - generic [ref=e182]:
+        - generic [ref=e183]: 2026 — Present
+        - generic [ref=e184]: Co-Founder & Engineer
+        - generic [ref=e185]: OLIVA (Gym Management SaaS)
+        - generic [ref=e186]: Built core modules for member management, subscription billing, workout planning, and real-time chat. Led brand identity and go-to-market strategy, targeting 400+ independent gyms.
+      - generic [ref=e189]:
+        - generic [ref=e190]: 2026 — Present
+        - generic [ref=e191]: Founder & CTO
+        - generic [ref=e192]: NutriTamil
+        - generic [ref=e193]: Architected the full-stack application (React, Vite, Firebase, Gemini API) and engineered a 7-day response-caching layer. Designed a 3-pillar personalized wellness framework tailored to Tamil Siddha nutrition philosophy.
+      - generic [ref=e196]:
+        - generic [ref=e197]: Internships
+        - generic [ref=e198]: Clinical & Nutritional Analyst
+        - generic [ref=e199]: Agro Food Trade Center & Grace Kennet Hospital
+        - generic [ref=e200]: Conducted nutritional composition analysis of staple foods. Performed clinical diagnostic tests including Widal test and urine analysis, gaining hands-on lab experience in clinical diagnostic workflows.
+      - generic [ref=e203]:
+        - generic [ref=e204]: 2023 — 2027
+        - generic [ref=e205]: "B.Tech in Biotechnology (CGPA: 7.7)"
+        - generic [ref=e206]: Sethu Institute of Technology, Kariapatti
+        - generic [ref=e207]: "Certifications: NPTEL Human Physiology, Basics of Biology, C/C++/Python Programming (CSC), Digital Marketing (Udemy)."
+  - generic [ref=e211]:
+    - paragraph [ref=e212]: 05 — Contact
+    - heading "Let's Build Together" [level=2] [ref=e213]
+    - paragraph [ref=e214]: Whether you are recruiting, collaborating, or building something significant — I welcome the conversation. If you are working on something worth building, let's talk.
+    - generic [ref=e215]:
+      - link "Send an Email" [ref=e216] [cursor=pointer]:
+        - /url: mailto:rohithkannan362@gmail.com
+      - link "LinkedIn" [ref=e217] [cursor=pointer]:
+        - /url: https://linkedin.com/in/rohith-kannan-535712288
+      - link "GitHub" [ref=e218] [cursor=pointer]:
+        - /url: https://github.com/rohithkannan362-rk
+  - contentinfo [ref=e219]:
+    - generic [ref=e220]: S. ROHITH KANNAN
+    - generic [ref=e221]: Madurai, Tamil Nadu · 2026
