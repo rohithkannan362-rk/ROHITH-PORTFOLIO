@@ -201,8 +201,9 @@ nav.scrolled{background:rgba(0,0,0,0.95);border-bottom-color:rgba(255,215,0,.3);
 .photo-ring-inner{position:absolute;inset:4px;border-radius:50%;background:var(--bg);box-shadow:inset 0 0 20px #000;}
 .hero-photo{
   position:relative;z-index:1;width:220px;height:220px;
-  border-radius:50%;object-fit:cover;object-position:center 20%;display:block;
-  border:2px solid rgba(255,215,0,0.2);
+  border-radius:50%;object-fit:cover;object-position:center center;display:block;
+  border:2px solid rgba(255,215,0,0.3);
+  box-shadow:0 0 30px rgba(255,215,0,0.25);
 }
 .photo-fallback{
   position:absolute;inset:0;z-index:1;border-radius:50%;
@@ -490,21 +491,146 @@ footer::before{
 .footer-copy{font-size:.8rem;color:rgba(169,169,169,.5);letter-spacing:.15em;}
 
 /* ══════════════════ RESPONSIVE ══════════════════ */
+@keyframes orbitSatelliteMobile{
+  from{transform:rotate(0deg) translateX(88px) rotate(0deg);}
+  to{transform:rotate(360deg) translateX(88px) rotate(-360deg);}
+}
+@keyframes orbitSatellite2Mobile{
+  from{transform:rotate(0deg) translateX(80px) rotate(0deg);}
+  to{transform:rotate(-360deg) translateX(80px) rotate(360deg);}
+}
+@keyframes orbitSatelliteSmall{
+  from{transform:rotate(0deg) translateX(74px) rotate(0deg);}
+  to{transform:rotate(360deg) translateX(74px) rotate(-360deg);}
+}
+@keyframes orbitSatellite2Small{
+  from{transform:rotate(0deg) translateX(68px) rotate(0deg);}
+  to{transform:rotate(-360deg) translateX(68px) rotate(360deg);}
+}
+
 @media(max-width:900px){
-  nav{padding:1.2rem 2rem;}
+  nav{padding:1rem 1.8rem;}
   .nav-links{display:none;}
   .hamburger{display:flex;}
-  section{padding:6rem 2rem;}
-  .about-grid,.about-cards{grid-template-columns:1fr;}
-  .about-grid{gap:3.5rem;}
-  .hero-stats{gap:2.5rem;flex-direction:column;align-items:center;}
+  section{padding:5rem 2rem;}
+  .about-grid{grid-template-columns:1fr;gap:3rem;}
+  .about-cards{grid-template-columns:repeat(2,1fr);gap:1.2rem;}
+  .hero-stats{gap:2.5rem;justify-content:center;}
   .sec-title{font-size:2rem;}
-  .hero-name{font-size:clamp(2.5rem,8vw,4rem);}
-  .skills-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));}
+  .hero-name{font-size:clamp(2.4rem,7vw,3.8rem);}
+  .skills-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:0.9rem;}
   .project-card{padding:2rem;}
   .timeline{padding-left:2.5rem;}
   .t-dot{left:-2.5rem;transform:translateX(-8.5px);}
-  .contact-box{padding:2rem 1rem;}
+  .contact-box{padding:2.5rem 1.5rem;}
+}
+
+@media(max-width:640px){
+  nav{padding:0.85rem 1.25rem;}
+  section{padding:4rem 1.2rem;}
+  #hero{min-height:100svh;padding:5.2rem 1.2rem 2.5rem;}
+  .hero-inner{gap:1.4rem;}
+
+  /* Photo scaled down comfortably */
+  .photo-wrap{width:160px;height:160px;}
+  .photo-ring{inset:-8px;}
+  .photo-ring-inner{inset:3px;}
+  .hero-photo{width:160px;height:160px;border-width:2px;}
+  .satellite{width:6px;height:6px;margin:-3px;}
+  .satellite:nth-child(1){animation:orbitSatelliteMobile 10s linear infinite;}
+  .satellite:nth-child(2){animation:orbitSatellite2Mobile 14s linear infinite;width:4px;height:4px;margin:-2px;}
+  .satellite:nth-child(3){animation:orbitSatelliteMobile 18s linear infinite reverse;width:5px;height:5px;margin:-2.5px;}
+
+  /* Typography scaled down for mobile */
+  .hero-name{font-size:clamp(1.85rem,7.5vw,2.5rem);line-height:1.15;letter-spacing:0.01em;}
+  .hero-tagline{font-size:0.92rem;min-height:2.4rem;line-height:1.45;padding:0 0.5rem;}
+  
+  /* Buttons full-width / stacked cleanly */
+  .hero-btns{gap:0.75rem;width:100%;max-width:320px;flex-direction:column;}
+  .btn-solid,.btn-ghost{
+    padding:0.82rem 1.4rem;font-size:0.82rem;width:100%;text-align:center;
+    letter-spacing:0.08em;
+  }
+
+  /* Stats side-by-side on mobile instead of huge column */
+  .hero-stats{
+    flex-direction:row !important;justify-content:center;gap:2rem;
+    padding-top:1rem;width:100%;max-width:300px;
+    border-top:1px solid rgba(255,215,0,0.12);
+  }
+  .stat-num{font-size:1.6rem;}
+  .stat-lbl{font-size:0.65rem;letter-spacing:0.12em;}
+  .scroll-hint{bottom:0.75rem;font-size:0.55rem;letter-spacing:0.3em;}
+
+  /* Titles & dividers */
+  .divider{margin-bottom:2.2rem;}
+  .eyebrow{font-size:0.65rem;letter-spacing:0.3em;margin-bottom:0.35rem;}
+  .sec-title{font-size:1.65rem;margin-bottom:2rem;}
+
+  /* About */
+  .about-grid{gap:2rem;}
+  .about-text p{font-size:0.92rem;line-height:1.8;margin-bottom:1rem;}
+  .about-links{gap:1rem;flex-wrap:wrap;}
+  .about-link{font-size:0.85rem;}
+  .about-cards{grid-template-columns:repeat(2,1fr);gap:0.75rem;}
+  .about-card{padding:1.1rem 0.85rem;border-radius:14px;}
+  .card-icon{font-size:1.3rem;margin-bottom:0.4rem;}
+  .card-title{font-size:0.95rem;margin-bottom:0.2rem;}
+  .card-sub{font-size:0.72rem;line-height:1.35;}
+
+  /* Skills 2-column balanced grid */
+  .skills-grid{grid-template-columns:repeat(2,1fr);gap:0.65rem;}
+  .skill-item{padding:0.85rem 0.75rem;border-radius:12px;}
+  .skill-name{font-size:0.82rem;margin-bottom:0.25rem;}
+  .skill-cat{font-size:0.62rem;}
+
+  /* Project cards */
+  .project-card{padding:1.4rem 1.15rem;border-radius:16px;margin-bottom:1.5rem;}
+  .proj-header{gap:0.85rem;margin-bottom:1rem;align-items:center;}
+  .proj-icon{width:42px;height:42px;border-radius:10px;}
+  .proj-icon svg{width:20px;height:20px;}
+  .proj-name{font-size:1.25rem;}
+  .proj-tag{font-size:0.65rem;letter-spacing:0.15em;}
+  .proj-desc{font-size:0.88rem;line-height:1.7;margin-bottom:1.2rem;}
+  .proj-tags{gap:0.35rem;margin-bottom:1.4rem;}
+  .tag{padding:0.25rem 0.6rem;font-size:0.7rem;border-radius:4px;}
+  .project-card .btn-solid{
+    padding:0.7rem 1.4rem;font-size:0.8rem;display:block;width:100%;text-align:center;
+  }
+
+  /* Timeline */
+  .timeline{padding-left:1.6rem;border-left:2px solid rgba(255,215,0,0.18);}
+  .timeline-item{margin-bottom:2.2rem;}
+  .t-dot{width:14px;height:14px;left:-1.6rem;transform:translateX(-8px);margin-top:0.25rem;border-width:2px;}
+  .t-year{font-size:0.68rem;letter-spacing:0.2em;margin-bottom:0.35rem;}
+  .t-role{font-size:1.05rem;line-height:1.35;margin-bottom:0.25rem;}
+  .t-org{font-size:0.78rem;letter-spacing:0.08em;margin-bottom:0.65rem;}
+  .t-desc{font-size:0.86rem;line-height:1.7;}
+
+  /* Contact */
+  .contact-box{padding:2.2rem 1.15rem;border-radius:18px;}
+  .contact-title{font-size:clamp(1.6rem,6vw,2.2rem);margin-bottom:1rem;}
+  .contact-desc{font-size:0.88rem;line-height:1.7;margin-bottom:2rem;}
+  .contact-btns{gap:0.75rem;flex-direction:column;width:100%;align-items:center;}
+  .contact-btns a{width:100%;max-width:280px;text-align:center;padding:0.8rem 1.4rem;font-size:0.82rem;}
+
+  /* Footer */
+  footer{padding:2rem 1.25rem;flex-direction:column;text-align:center;gap:0.75rem;}
+  .footer-brand{font-size:0.8rem;letter-spacing:0.15em;}
+  .footer-copy{font-size:0.72rem;}
+}
+
+@media(max-width:400px){
+  #hero{padding:4.8rem 1rem 2rem;}
+  .photo-wrap{width:140px;height:140px;}
+  .hero-photo{width:140px;height:140px;}
+  .satellite:nth-child(1){animation:orbitSatelliteSmall 10s linear infinite;}
+  .satellite:nth-child(2){animation:orbitSatellite2Small 14s linear infinite;}
+  .satellite:nth-child(3){animation:orbitSatelliteSmall 18s linear infinite reverse;}
+  .hero-name{font-size:clamp(1.65rem,7vw,2.1rem);}
+  .hero-stats{gap:1.4rem;}
+  .about-cards{grid-template-columns:1fr;}
+  .skills-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -552,8 +678,8 @@ footer::before{
     <div class="photo-wrap">
       <div class="photo-ring"></div>
       <div class="photo-ring-inner"></div>
-      <img class="hero-photo" id="heroImg" src="my_photo.jpg" alt="S. Rohith Kannan"
-        onerror="this.style.display='none';document.getElementById('photoFallback').style.display='flex'"/>
+      <img class="hero-photo" id="heroImg" src="rohith_photo.png?v=2" alt="S. Rohith Kannan"
+        onerror="this.src='my_photo.jpg';this.onerror=function(){this.style.display='none';document.getElementById('photoFallback').style.display='flex';};"/>
       <div class="photo-fallback" id="photoFallback" style="display:none">RK</div>
       <div class="orbit-container">
         <div class="satellite"></div>
@@ -574,7 +700,7 @@ footer::before{
     </div>
 
     <div class="hero-stats">
-      <div><div class="stat-num" data-count="3">0</div><div class="stat-lbl">Active Platforms</div></div>
+      <div><div class="stat-num" data-count="4">0</div><div class="stat-lbl">Active Platforms</div></div>
       <div><div class="stat-num">&#8734;</div><div class="stat-lbl">Ambition Level</div></div>
     </div>
   </div>
@@ -592,8 +718,8 @@ footer::before{
       <div class="reveal from-left">
         <div class="about-text">
           <p>I am <strong>S. Rohith Kannan</strong> &mdash; a Biotechnology undergraduate at Sethu Institute of Technology and a high-performance product engineer driven by the intersection of biological science and intelligence systems.</p>
-          <p>While many study, I build. <strong>OLIVA</strong> is a disruptive gym management SaaS modernizing traditional fitness operations. <strong>NutriTamil AI</strong> is the first comprehensive nutrition platform dedicated to South Indian health. I've also built a <strong>Hospital-facing clinical platform</strong> for adolescent health management, taking it from concept to a full AI-integrated product.</p>
-          <p>My toolkit centers on React, Firebase, and Gemini/Groq AI. I specialize in shipping fast, scaling effectively, and solving complex problems with lean, efficient code. Beyond software, I've conducted clinical diagnostic tests and nutritional composition analysis during my internships, bridging the gap between biology and technology.</p>
+          <p>While many study, I build. <strong>OLIVA</strong> and <strong>FITZONE</strong> are next-generation gym management SaaS platforms modernizing fitness operations and digital memberships. <strong>NutriTamil AI</strong> is the first comprehensive nutrition platform dedicated to South Indian health. I've also built a <strong>Hospital-facing clinical platform</strong> for adolescent health management, taking it from concept to a full AI-integrated product.</p>
+          <p>My toolkit centers on React, TypeScript, Supabase, Firebase, and Gemini/Groq AI. I specialize in shipping fast, scaling effectively, and solving complex problems with lean, efficient code. Beyond software, I've conducted clinical diagnostic tests and nutritional composition analysis during my internships, bridging the gap between biology and technology.</p>
         </div>
         <div class="about-links">
           <a href="https://linkedin.com/in/rohith-kannan-535712288" target="_blank" class="about-link">LinkedIn</a>
@@ -602,9 +728,9 @@ footer::before{
         </div>
       </div>
       <div class="about-cards">
-        <div class="about-card reveal from-right"><div class="card-icon">&#9651;</div><div class="card-title">Founder</div><div class="card-sub">3 full-stack platforms built</div></div>
-        <div class="about-card reveal from-right"><div class="card-icon">&#9737;</div><div class="card-title">Scientist</div><div class="card-sub">B.Tech Biotechnology, SIT Madurai</div></div>
-        <div class="about-card reveal from-right"><div class="card-icon">&#9670;</div><div class="card-title">Engineer</div><div class="card-sub">Self-taught, AI-assisted dev</div></div>
+        <div class="about-card reveal from-right"><div class="card-icon">&#9651;</div><div class="card-title">Founder</div><div class="card-sub">4 full-stack platforms built</div></div>
+        <div class="about-card reveal from-right"><div class="card-icon">&#9737;</div><div class="card-title">Engineer</div><div class="card-sub">B.Tech Biotechnology, SIT Madurai</div></div>
+        <div class="about-card reveal from-right"><div class="card-icon">&#9670;</div><div class="card-title">Developer</div><div class="card-sub">Self-taught, AI-assisted dev</div></div>
         <div class="about-card reveal from-right"><div class="card-icon">&#9675;</div><div class="card-title">Builder</div><div class="card-sub">Long-term, large-scale vision</div></div>
       </div>
     </div>
@@ -619,6 +745,11 @@ footer::before{
     <h2 class="sec-title reveal">Technical Proficiency</h2>
     <div class="skills-grid">
       <div class="skill-item reveal"><div class="skill-name">React &amp; Vite</div><div class="skill-cat">Frontend</div></div>
+      <div class="skill-item reveal"><div class="skill-name">TypeScript</div><div class="skill-cat">Language</div></div>
+      <div class="skill-item reveal"><div class="skill-name">Tailwind CSS</div><div class="skill-cat">Styling &amp; UI</div></div>
+      <div class="skill-item reveal"><div class="skill-name">Framer Motion</div><div class="skill-cat">Animation &amp; UI</div></div>
+      <div class="skill-item reveal"><div class="skill-name">Supabase &amp; PostgreSQL</div><div class="skill-cat">Backend / Database</div></div>
+      <div class="skill-item reveal"><div class="skill-name">Supabase Auth &amp; RLS</div><div class="skill-cat">Security &amp; Auth</div></div>
       <div class="skill-item reveal"><div class="skill-name">Firebase</div><div class="skill-cat">Backend / Database</div></div>
       <div class="skill-item reveal"><div class="skill-name">Gemini &amp; Groq API</div><div class="skill-cat">AI Integration</div></div>
       <div class="skill-item reveal"><div class="skill-name">JavaScript / HTML / CSS</div><div class="skill-cat">Language</div></div>
@@ -629,7 +760,6 @@ footer::before{
       <div class="skill-item reveal"><div class="skill-name">Git / GitHub</div><div class="skill-cat">Version Control</div></div>
       <div class="skill-item reveal"><div class="skill-name">SaaS Architecture</div><div class="skill-cat">Product Engineering</div></div>
       <div class="skill-item reveal"><div class="skill-name">Product Strategy</div><div class="skill-cat">Business &amp; Product</div></div>
-      <div class="skill-item reveal"><div class="skill-name">Go-to-Market</div><div class="skill-cat">Business &amp; Product</div></div>
     </div>
   </div>
 </section>
@@ -695,6 +825,23 @@ footer::before{
     <div class="project-card reveal" id="pc4">
       <div class="proj-header">
         <div class="proj-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v16M18 4v16M2 8h4M18 8h4M2 16h4M18 16h4M6 12h12"/></svg>
+        </div>
+        <div>
+          <div class="proj-name">FITZONE</div>
+          <div class="proj-tag">Gym Membership Management Platform</div>
+        </div>
+      </div>
+      <p class="proj-desc">A modern, full-stack gym management platform engineered to streamline membership management, package selection, payments, and administrative operations through a secure and intuitive digital experience. Features Supabase Authentication, PostgreSQL database with Row Level Security (RLS), role-based access, and a manual UPI payment verification workflow. Enables members to explore gym packages, purchase or renew memberships, and track plans, with a centralized admin dashboard for complete operational control.</p>
+      <div class="proj-tags" style="margin-bottom:2rem;">
+        <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span><span class="tag">Framer Motion</span><span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Supabase Auth</span><span class="tag">RLS</span>
+      </div>
+      <a href="https://fit-zone-7d3n.vercel.app" target="_blank" class="btn-solid" style="padding:0.7rem 1.8rem; font-size: 0.8rem; display:inline-block;">Launch Project</a>
+    </div>
+
+    <div class="project-card reveal" id="pc5">
+      <div class="proj-header">
+        <div class="proj-icon">
           <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
         </div>
         <div>
@@ -750,7 +897,16 @@ footer::before{
           <div class="t-year">2023 &mdash; 2027</div>
           <div class="t-role">B.Tech in Biotechnology (CGPA: 7.7)</div>
           <div class="t-org">Sethu Institute of Technology, Kariapatti</div>
-          <div class="t-desc">Certifications: NPTEL Human Physiology, Basics of Biology, C/C++/Python Programming (CSC), Digital Marketing (Udemy).</div>
+          <div class="t-desc">Relevant certifications &amp; coursework: Advanced Diploma in Python Programming (ADPP - Grade A), NPTEL Human Physiology, Basics of Biology, Digital Marketing (Udemy).</div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="t-dot"></div>
+        <div>
+          <div class="t-year">April 2023 &mdash; August 2023</div>
+          <div class="t-role">Advanced Diploma in Python Programming (ADPP)</div>
+          <div class="t-org">CSC Computer Education &bull; Grade: A (Excellent)</div>
+          <div class="t-desc">Earned an Advanced Diploma in Python Programming (ADPP), developing a strong foundation in Python, C, and Object-Oriented Programming (OOP) using C++, with an emphasis on programming logic, problem-solving, and practical software development.</div>
         </div>
       </div>
     </div>
@@ -893,8 +1049,8 @@ footer::before{
 (function(){
   const phrases = [
     "Biotech Student  ·  App Builder  ·  Entrepreneur",
-    "Building the Future of Health Tech",
-    "React · Firebase · AI · Biotech"
+    "Building the Future of Health Tech & Fitness SaaS",
+    "React · TypeScript · Supabase · AI · Biotech"
   ];
   const el = document.getElementById('typed');
   let phraseIdx = 0;
